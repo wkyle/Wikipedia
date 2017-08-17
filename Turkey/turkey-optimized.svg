@@ -85,13 +85,12 @@
 					"p81":{"url":"https://en.wikipedia.org/wiki/D%C3%BCzce_Province","name":"Düzce"}};
 
 		function click(evt){
-                console.log(str(evt.target.id))
-			var id = str(evt.target.id).slice(1);
+			var id = evt.target.id;
 			window.open(pids[id]["url"]);
 		}
 
 		function hover(evt) {
-			var name = pids[str(evt.target.id).slice(1)]["name"];
+			var name = pids[evt.target.id]["name"];
 			var doc = evt.target.ownerDocument;
 			doc.getElementById("province-name").textContent = name;
 		}
